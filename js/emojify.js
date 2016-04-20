@@ -2,31 +2,18 @@
     'use strict';
 
     if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
         define([], factory);
     } else if (typeof exports === 'object') {
-        // Node. Does not work with strict CommonJS, but
-        // only CommonJS-like environments that support module.exports,
-        // like Node.
         module.exports = factory();
     } else {
-        // Browser globals (root is window)
         root.emojify = factory();
     }
 }(this, function () {
         'use strict';
 
         var emojify = (function () {
-            /**
-             * NB!
-             * The namedEmojiString variable is updated automatically by the
-             * "update" gulp task. Do not remove the comment as this will
-             * cause the gulp task to stop working.
-             */
             var namedEmojiString = ""
             var namedEmoji = namedEmojiString.split(/,/);
-
-            /* A hash with the named emoji as keys */
             var namedMatchHash = namedEmoji.reduce(function(memo, v) {
                 memo[v] = true;
                 return memo;
@@ -36,11 +23,8 @@
             var emojiMegaRe;
 
             function initEmoticonsProcessed() {
-                /* List of emoticons used in the regular expression */
                 var emoticons = {
-
-                     
-
+                
                      /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
 
                      // Emojis Pessoas e sorrisos
@@ -98,9 +82,43 @@
                      /* \ud83d\udc79 */ japanese_ogre: /\\ud83d\\udc79/,
                      /* \ud83e\udd16 */ esse_nao_tem_imagem7: /\\ud83e\\udd16/,
                      /* \ud83d\ude4c */ raised_hands: /\\ud83d\\ude4c/,
+                    /* \ud83d\ude02 */ joy: /\\ud83d\\ude02/, 
+                    /* \ud83d\ude07 */ innocent: /\\ud83d\\ude07/, 
+                    /* \u263a\ufe0f */ relaxed: /\\u263a\\ufe0f/, 
+                    /* \ud83d\ude17 */ kissing: /\\ud83d\\ude17/, 
+                    /* \ud83d\ude1b */ stuck_out_tongue: /\\ud83d\\ude1b/, 
+                    /* \ud83d\ude0f */ smirk: /\\ud83d\\ude0f/, 
+                    /* \ud83d\ude44 */ esse_nao_tem_imagem8: /\\ud83d\\ude44/, 
+                    /* \ud83d\ude20 */ angry: /\\ud83d\\ude20/, 
+                    /* \ud83d\ude20 */ esse_nao_tem_imagem9: /\\ud83d\\ude20/, 
+                    /* \ud83d\ude24 */ triumph: /\\ud83d\\ude24/, 
+                    /* \ud83d\ude2f */ hushed: /\\ud83d\\ude2f/, 
+                    /* \ud83d\ude2a */ sleepy: /\\ud83d\\ude2a/,
+                    /* \ud83e\udd10 */ esse_nao_tem_imagem11: /\\ud83e\\udd10/, 
+                    /* \ud83d\udca4 */ zzz: /\\ud83d\\udca4/, 
+                    /* \ud83d\udc7a */ japanese_goblin: /\\ud83d\\udc7a/,   
+                    /* \ud83d\ude3a */ smiley_cat: /\\ud83d\\ude3a/, 
+                    /* \ud83d\ude3d */ kissing_cat: /\\ud83d\\ude3d/, 
+                    /* \ud83d\udc4f */ clap: /\\ud83d\\udc4f/,
 
-
-
+                    /* \ud83d\ude03 */ smiley: /\\ud83d\\ude03/,
+                    /* \ud83d\ude09 */ wink: /\\ud83d\\ude09/, 
+                    /* \ud83d\ude0b */ yum: /\\ud83d\\ude0b/, 
+                    /* \ud83d\ude19 */ kissing_smiling_eyes: /\\ud83d\\ude19/, 
+                    /* \ud83e\udd11 */ esse_nao_tem_imagem12: /\\ud83e\\udd11/, 
+                    /* \ud83d\ude36 */ no_mouth: /\\ud83d\\ude36/, 
+                    /* \ud83e\udd14 */ esse_nao_tem_imagem13: /\\ud83e\\udd14/, 
+                    /* \ud83d\ude21 */ rage: /\\ud83d\\ude21/, 
+                    /* \ud83d\ude23 */ persevere: /\\ud83d\\ude23/, 
+                    /* \ud83d\ude2e */ open_mouth: /\\ud83d\\ude2e/, 
+                    /* \ud83d\ude26 */ frowning: /\\ud83d\\ude26/, 
+                    /* \ud83d\ude13 */ sweat: /\\ud83d\\ude13/, 
+                    /* \ud83d\ude37 */ mask: /\\ud83d\\ude37/, 
+                    /* \ud83d\udca9 */ esse_nao_tem_imagem14: /\\ud83d\\udca9/, 
+                    /* \ud83d\udc80 */ hankey: /\\ud83d\\udc80/, 
+                    /* \ud83d\ude38 */ smile_cat: /\\ud83d\\ude38/, 
+                    /* \ud83d\ude40 */ scream_cat: /\\ud83d\\ude40/,
+                    /* \ud83d\udc4b */ wave: /\\ud83d\\udc4b/,
 
                      // Emojis Default Facebook
 
@@ -142,7 +160,6 @@
             }
 
             function initMegaRe() {
-                /* The source for our mega-regex */
                 var mega = emoticonsProcessed
                         .map(function(v) {
                             var re = v[0];
@@ -151,8 +168,6 @@
                             return "(" + val + ")";
                         })
                         .join('|');
-
-                /* The regex used to find emoji */
                 return new RegExp(mega, "gi");
             }
 
@@ -169,7 +184,6 @@
                 mode: 'img'
             };
 
-            /* Returns true if the given char is whitespace */
             function isWhitespace(s) {
                 return s === ' ' || s === '\t' || s === '\r' || s === '\n' || s === '' || s === String.fromCharCode(160);
             }
@@ -180,7 +194,6 @@
                 'data-uri': 'span'
             };
 
-            /* Given a match in a node, replace the text with an image */
             function insertEmojicon(args) {
                 var emojiElement = null;
 
@@ -217,9 +230,7 @@
                 args.node.parentNode.insertBefore(emojiElement, args.node.nextSibling);
             }
 
-            /* Given an regex match, return the name of the matching emoji */
             function getEmojiNameForMatch(match) {
-                /* Special case for named emoji */
                 if(match[1] && match[2]) {
                     var named = match[2];
                     if(namedMatchHash[named]) { return named; }
@@ -233,7 +244,6 @@
             }
 
             function defaultReplacer(emoji, name) {
-                /*jshint validthis: true */
                 var elementType = this.config.tag_type || modeToElementTagType[this.config.mode];
                 if (elementType !== 'img') {
                     return "<" +  elementType +" class='emoji emoji-" + name + "' title=':" + name + ":'></" + elementType+ ">";
@@ -250,34 +260,27 @@
                 validate: function(match, index, input) {
                     var self = this;
 
-                    /* Validator */
                     var emojiName = getEmojiNameForMatch(match);
                     if(!emojiName) { return; }
 
                     var m = match[0];
                     var length = m.length;
-                    // var index = match.index;
-                    // var input = match.input;
 
                     function success() {
                         self.lastEmojiTerminatedAt = length + index;
                         return emojiName;
                     }
 
-                    /* At the beginning? */
                     if(index === 0) { return success(); }
 
-                    /* At the end? */
                     if(input.length === m.length + index) { return success(); }
 
                     var hasEmojiBefore = this.lastEmojiTerminatedAt === index;
                     if (hasEmojiBefore) { return success();}
 
-                    /* Has a whitespace before? */
                     if(isWhitespace(input.charAt(index - 1))) { return success(); }
 
                     var hasWhitespaceAfter = isWhitespace(input.charAt(m.length + index));
-                    /* Has a whitespace after? */
                     if(hasWhitespaceAfter && hasEmojiBefore) { return success(); }
 
                     return;
@@ -305,17 +308,13 @@
                             [arguments[0], emojiName]
                         );
                     }
-                    /* Did not validate, return the original value */
                     return arguments[0];
                 });
 
             }
             function run(el, replacer) {
 
-                // Check if an element was not passed.
-                // This will only work in the browser
                 if(typeof el === 'undefined'){
-                    // Check if an element was configured. If not, default to the body.
                     if (defaultConfig.only_crawl_id) {
                         el = document.getElementById(defaultConfig.only_crawl_id);
                     } else {
@@ -323,7 +322,6 @@
                     }
                 }
 
-                // Get the window object from the passed element.
                 var doc = el.ownerDocument,
                     win = doc.defaultView || doc.parentWindow;
 
@@ -353,7 +351,6 @@
                     }
 
                     for (var i = matches.length; i-- > 0;) {
-                        /* Replace the text with the emoji */
                         var emojiName = getEmojiNameForMatch(matches[i]);
                         insertEmojicon({
                             node: node,
@@ -379,7 +376,6 @@
                         win.NodeFilter.SHOW_TEXT | win.NodeFilter.SHOW_ELEMENT,
                         function(node) {
                             if(node.nodeType !== 1) {
-                                /* Text Node? Good! */
                                 return win.NodeFilter.FILTER_ACCEPT;
                             }
 
@@ -419,7 +415,6 @@
             }
 
             return {
-                // Sane defaults
                 defaultConfig: defaultConfig,
                 emojiNames: namedEmoji,
                 setConfig: function (newConfig) {
@@ -431,12 +426,9 @@
                 },
 
                 replace: emojifyString,
-
-                // Main method
                 run: run
             };
         })();
-
         return emojify;
     }
 ));
