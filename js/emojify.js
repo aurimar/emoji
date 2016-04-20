@@ -39,9 +39,21 @@
                 /* List of emoticons used in the regular expression */
                 var emoticons = {
 
-                     // Emojis Default Facebook //
+                     
 
                      /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
+
+                     // Emojis Pessoas e sorrisos
+
+                     /* \ud83d\ude00 */ grinning: /\\ud83d\\ude00/,
+                     /* \ud83d\ude04 */ smile: /\\ud83d\\ude04/,
+                     /* \ud83d\ude0a */ blush: /\\ud83d\\ude0a/,
+                     /* \ud83d\ude0c */ relieved: /\\ud83d\\ude0c/,
+
+
+
+                     // Emojis Default Facebook
+
                      /* :)   */ fb_smile: /:?\)/,
                      /* :(   */ fb_frown: /:-?\(/,
                      /* :P   */ fb_tongue: /[:;]-?p/,
@@ -63,8 +75,6 @@
                      /* ^_^  */ fb_kiki: /[\\^^][\\_][\\^^]/,
                      /* :3   */ fb_colonthree: /[\?:][\?3]/,
                      /* (y)  */ fb_like: /(\(y\))/
-                     
-                     
                      
                 };
 
