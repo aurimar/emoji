@@ -366,18 +366,79 @@
                     /* \ud83d\udca6 */ sweat_drops: /\\ud83d\\udca6/,
                     /* \ud83c\udf0a */ ocean: /\\ud83c\\udf0a/,
 
+                    // Emojis Comidas e Bebidas 
 
-
-
-
-
-
-
-
-
-
-
+                    /* \ud83c\udf4f */ green_apple: /\\ud83c\\udf4f/,
+                    /* \ud83c\udf4e */ apple: /\\ud83c\\udf4e/,
+                    /* \ud83c\udf50 */ pear: /\\ud83c\\udf50/,
+                    /* \ud83c\udf4a */ tangerine: /\\ud83c\\udf4a/,
+                    /* \ud83c\udf4b */ lemon: /\\ud83c\\udf4b/,
+                    /* \ud83c\udf4c */ banana: /\\ud83c\\udf4c/,
+                    /* \ud83c\udf49 */ watermelon: /\\ud83c\\udf49/,
+                    /* \ud83c\udf47 */ grapes: /\\ud83c\\udf47/,
+                    /* \ud83c\udf53 */ strawberry: /\\ud83c\\udf53/,
+                    /* \ud83c\udf48 */ melon: /\\ud83c\\udf48/,
+                    /* \ud83c\udf52 */ cherries: /\\ud83c\\udf52/,
+                    /* \ud83c\udf51 */ peach: /\\ud83c\\udf51/,
+                    /* \ud83c\udf4d */ pineapple: /\\ud83c\\udf4d/,
+                    /* \ud83c\udf45 */ tomato: /\\ud83c\\udf45/,
+                    /* \ud83c\udf46 */ eggplant: /\\ud83c\\udf46/,
+                    /* \ud83c\udf36 */ esse_nao_tem_imagem47: /\\ud83c\\udf36/,
+                    /* \ud83c\udf3d */ corn: /\\ud83c\\udf3d/,
+                    /* \ud83c\udf60 */ sweet_potato: /\\ud83c\\udf60/,
+                    /* \ud83c\udf6f */ honey_pot: /\\ud83c\\udf6f/,
+                    /* \ud83c\udf5e */ bread: /\\ud83c\\udf5e/,
+                    /* \ud83e\uddc0 */ esse_nao_tem_imagem48: /\\ud83e\\uddc0/,
+                    /* \ud83c\udf57 */ poultry_leg: /\\ud83c\\udf57/,
+                    /* \ud83c\udf56 */ meat_on_bone: /\\ud83c\\udf56/,
+                    /* \ud83c\udf64 */ fried_shrimp: /\\ud83c\\udf64/,
+                    /* \ud83c\udf73 */ egg: /\\ud83c\\udf73/,
+                    /* \ud83c\udf54 */ hamburger: /\\ud83c\\udf54/,
+                    /* \ud83c\udf5f */ fries: /\\ud83c\\udf5f/,
+                    /* \ud83c\udf2d */ esse_nao_tem_imagem49: /\\ud83c\\udf2d/,
+                    /* \ud83c\udf55 */ pizza: /\\ud83c\\udf55/,
+                    /* \ud83c\udf5d */ spaghetti: /\\ud83c\\udf5d/,
+                    /* \ud83c\udf2e */ esse_nao_tem_imagem50: /\\ud83c\\udf2e/,
+                    /* \ud83c\udf2f */ esse_nao_tem_imagem51: /\\ud83c\\udf2f/,
+                    /* \ud83c\udf5c */ ramen: /\\ud83c\\udf5c/,
+                    /* \ud83c\udf72 */ stew: /\\ud83c\\udf72/,
+                    /* \ud83c\udf65 */ fish_cake: /\\ud83c\\udf65/,
+                    /* \ud83c\udf63 */ sushi: /\\ud83c\\udf63/,
+                    /* \ud83c\udf71 */ esse_nao_tem_imagem52: /\\ud83c\\udf71/,
+                    /* \ud83c\udf5b */ curry: /\\ud83c\\udf5b/,
+                    /* \ud83c\udf59 */ rice_ball: /\\ud83c\\udf59/,
+                    /* \ud83c\udf5a */ rice: /\\ud83c\\udf5a/,
+                    /* \ud83c\udf58 */ rice_cracker:/\\ud83c\\udf58/,
+                    /* \ud83c\udf62 */ oden: /\\ud83c\\udf62/,
+                    /* \ud83c\udf61 */ dango: /\\ud83c\\udf61/,
+                    /* \ud83c\udf67 */ shaved_ice: /\\ud83c\\udf67/,
+                    /* \ud83c\udf68 */ ice_cream: /\\ud83c\\udf68/,
+                    /* \ud83c\udf66 */ icecream: /\\ud83c\\udf66/,
+                    /* \ud83c\udf70 */ cake: /\\ud83c\\udf70/,
+                    /* \ud83c\udf82 */ birthday: /\\ud83c\\udf82/,
+                    /* \ud83c\udf6e */ esse_nao_tem_imagem53: /\\ud83c\\udf6e/,
+                    /* \ud83c\udf6c */ candy: /\\ud83c\\udf6c/,
+                    /* \ud83c\udf6d */ lollipop: /\\ud83c\\udf6d/,
+                    /* \ud83c\udf6b */ chocolate_bar: /\\ud83c\\udf6b/,
+                    /* \ud83c\udf7f */ esse_nao_tem_imagem54: /\\ud83c\\udf7f/,
+                    /* \ud83c\udf69 */ donut: /\\ud83c\\udf69/,
+                    /* \ud83c\udf6a */ cookie: /\\ud83c\\udf6a/,
+                    /* \ud83c\udf7a */ beer: /\\ud83c\\udf7a/,
+                    /* \ud83c\udf7b */ beers: /\\ud83c\\udf7b/,
+                    /* \ud83c\udf77 */ wine_glass: /\\ud83c\\udf77/,
+                    /* \ud83c\udf78 */ cocktail: /\\ud83c\\udf78/,
+                    /* \ud83c\udf79 */ tropical_drink: /\\ud83c\\udf79/,
+                    /* \ud83c\udf7e */ esse_nao_tem_imagem55: /\\ud83c\\udf7e/,
+                    /* \ud83c\udf76 */ sake: /\\ud83c\\udf76/,
+                    /* \ud83c\udf75 */ tea: /\\ud83c\\udf75/,
+                    /* \u2615 */       coffee: /\\u2615/,
+                    /* \ud83c\udf7c */ baby_bottle: /\\ud83c\\udf7c/,
+                    /* \ud83c\udf74 */ fork_and_knife: /\\ud83c\\udf74/,
+                    /* \ud83c\udf7d */ esse_nao_tem_imagem56: /\\ud83c\\udf7d/,
                     
+
+
+
 
 
 
